@@ -78,7 +78,7 @@ const Navbar = () => {
           <Link
             href="/"
             className={`text-white font-bold text-xl cursor-pointer ${
-              isHome ? "" : "text-violet-500"
+              isHome ? "" : ""
             } hidden md:inline-flex`}
           ></Link>
           <ul className="hidden  md:flex justify-around w-scr items-center  gap-4 sm:gap-14 lg:ml-[3em] md:ml-[0.5em]">
@@ -99,7 +99,7 @@ const Navbar = () => {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={` ${isHome ? "#faebd7" : "#faebd7"}`}
+              stroke={` ${isHome ? "none" : "none"}`}
               className="w-8 h-8 "
             >
               <path
@@ -175,7 +175,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Image
-          className="w-[90%] absolute bottom-0"
+          className="w-[70%] absolute bottom-0"
           src="/detail.svg"
           width={100}
           height={100}

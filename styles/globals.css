@@ -20,7 +20,9 @@ body {
   color: black;
   background: white;
 }
-
+.no-select {
+  user-select: none;
+}
 .swipperBtnNext {
   font-size: 5px;
   width: 64px !important;
@@ -30,6 +32,7 @@ body {
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 19%);
   right: -25px !important;
+  margin-right: 5%;
 }
 .swipperBtnNext:hover {
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.14));
@@ -39,7 +42,7 @@ body {
 }
 .swipperBtnNext::after {
   font-size: 22px !important;
-  color: #3483fa;
+  color: black;
 }
 .swipperBtnPrev {
   font-size: 5px;
@@ -50,10 +53,11 @@ body {
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 19%);
   left: -25px !important;
+  margin-left: 5%;
 }
 .swipperBtnPrev::after {
   font-size: 22px !important;
-  color: #3483fa;
+  color: black;
 }
 
 .swipper {

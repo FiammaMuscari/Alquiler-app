@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const phoneNumber = "+542236156046";
   return (
     <footer className="bg-white p-4  border-gray-300 footer-mobile">
       <section>
@@ -40,24 +41,30 @@ export default function Footer() {
                   B. Marítimo 4233, Mar del plata
                 </span>
               </li>
-              <li className="flex items-center gap-4">
-                <svg
-                  width="16"
-                  height="17"
-                  viewBox="0 0 16 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 1.40137C0 0.849082 0.447715 0.401367 1 0.401367H3.15287C3.64171 0.401367 4.0589 0.75478 4.13927 1.23697L4.87858 5.67284C4.95075 6.10587 4.73206 6.53534 4.3394 6.73167L2.79126 7.50574C3.90756 10.2797 6.12168 12.4938 8.89563 13.6101L9.6697 12.062C9.86603 11.6693 10.2955 11.4506 10.7285 11.5228L15.1644 12.2621C15.6466 12.3425 16 12.7597 16 13.2485V15.4014C16 15.9537 15.5523 16.4014 15 16.4014H13C5.8203 16.4014 0 10.5811 0 3.40137V1.40137Z"
-                    fill="#444444"
-                  />
-                </svg>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://wa.me/${phoneNumber}`}
+              >
+                <li className="flex items-center gap-4">
+                  <svg
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 1.40137C0 0.849082 0.447715 0.401367 1 0.401367H3.15287C3.64171 0.401367 4.0589 0.75478 4.13927 1.23697L4.87858 5.67284C4.95075 6.10587 4.73206 6.53534 4.3394 6.73167L2.79126 7.50574C3.90756 10.2797 6.12168 12.4938 8.89563 13.6101L9.6697 12.062C9.86603 11.6693 10.2955 11.4506 10.7285 11.5228L15.1644 12.2621C15.6466 12.3425 16 12.7597 16 13.2485V15.4014C16 15.9537 15.5523 16.4014 15 16.4014H13C5.8203 16.4014 0 10.5811 0 3.40137V1.40137Z"
+                      fill="#444444"
+                    />
+                  </svg>
 
-                <span className="text-[#a09999] font-medium">
-                  +54 223 615 6046
-                </span>
-              </li>
+                  <span className="text-[#a09999] font-medium">
+                    +54 223 615 6046
+                  </span>
+                </li>
+              </a>
               <li className="flex items-center gap-4">
                 <svg
                   width="16"
