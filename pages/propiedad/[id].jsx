@@ -11,7 +11,7 @@ const PropertyDetails = ({ property }) => {
     router.back();
   };
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container my-[3em] mx-auto px-4 py-8">
       <button
         onClick={handleGoBack}
         className="mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none"
