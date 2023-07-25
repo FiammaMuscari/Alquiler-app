@@ -1,55 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const response = await fetch("/api/hello", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
-
-    if (!response.ok) {
-      console.error("Error", await response.text());
-    } else {
-      const data = await response.json();
-      console.log(data.message);
-      setEmail("");
-    }
-  };
-
   return (
     <footer className="bg-white p-4  border-gray-300 footer-mobile">
       <section>
-        <div className="flex">
+        <div className="flex justify-around">
           <div>
             <h4 className="text-[#8B5CF6] font-bold mt-[1.5em] my-[0.4em]">
               Secciones
             </h4>
             <div className="flex flex-col gap-2">
-              <Link
-                className="text-[#4C1D95] font-bold"
-                href="/"
-                onClick={() => {
-                  document.body.scrollTo(0, 0);
-                }}
-              >
+              <Link className="text-[#4C1D95] font-bold" href="/">
                 Home
               </Link>
-              <Link
-                className="text-[#4C1D95] font-bold"
-                href="/why-us"
-                onClick={() => {
-                  document.body.scrollTo(0, 0);
-                }}
-              >
+              <Link className="text-[#4C1D95] font-bold" href="/why-us">
                 Sobre nosotros
               </Link>
             </div>
@@ -125,7 +89,7 @@ export default function Footer() {
 
       <section className="mt-4">
         <ul className="social-media flex mx-auto justify-evenly">
-          <Link href="https://www.instagram.com/belgaum_arg/" target="_blank">
+          <Link href="" target="_blank">
             <svg
               width="37"
               height="37"
@@ -139,10 +103,7 @@ export default function Footer() {
               />
             </svg>
           </Link>
-          <Link
-            href="https://www.linkedin.com/company/belgaumsa/"
-            target="_blank"
-          >
+          <Link href="" target="_blank">
             <svg
               width="37"
               height="37"
@@ -157,10 +118,7 @@ export default function Footer() {
             </svg>
           </Link>
 
-          <Link
-            href="https://www.youtube.com/channel/UCg-4BTw4VNE0x0Qu0JEtODg"
-            target="_blank"
-          >
+          <Link href="" target="_blank">
             <svg
               width="44"
               height="44"
@@ -175,7 +133,7 @@ export default function Footer() {
             </svg>
           </Link>
 
-          <Link href="https://www.facebook.com/belgaumok" target="_blank">
+          <Link href="" target="_blank">
             <svg
               width="40"
               height="40"
