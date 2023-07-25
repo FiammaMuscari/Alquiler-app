@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 
 const PropertyDetails = ({ properties }) => {
   const router = useRouter();
+  const property = properties[0];
   console.log(properties);
   const handleGoBack = () => {
     router.back();
@@ -18,14 +19,14 @@ const PropertyDetails = ({ properties }) => {
         Volver Atrás
       </button>
       <h1 className="text-3xl font-semibold mb-4"></h1>
-      <Image
+      {/* <Image
         src={`https:${properties.imagenPrincipal}`}
         alt={properties.titulo}
         width={600}
         height={400}
         className="w-full h-64 object-cover rounded-md mb-4"
-      />
-      <p className="text-lg"></p>
+      /> */}
+      <p className="text-lg text-black">{property.titulo}</p>
     </div>
   );
 };
