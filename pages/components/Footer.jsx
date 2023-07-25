@@ -11,7 +11,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-2">
               <Link className="text-[#444444] font-bold" href="/">
-                Home
+                Inicio
               </Link>
               <Link className="text-[#444444] font-bold" href="/about-us">
                 Sobre nosotros

@@ -130,7 +130,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`fixed rounded-r-[1em]   bg-[#9c958beb] top-0 left-0 z-20 h-screen w-[100%] transition-all duration-500 transform ${
+        className={`fixed   bg-[#9c958beb] top-0 left-0 z-20 h-screen w-[100%] transition-all duration-500 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } bg-black  shadow-lg`}
       >
