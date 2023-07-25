@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 const PropertyDetails = ({ properties }) => {
   const router = useRouter();
   const property = properties[0];
-  console.log(properties);
   const handleGoBack = () => {
     router.back();
   };

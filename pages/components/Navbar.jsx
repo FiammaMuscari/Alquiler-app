@@ -50,11 +50,11 @@ const Navbar = () => {
   const NavItem = ({ href, children }) => (
     <Link
       href={href}
-      className={`text-2xl sm:text-base   hover:text-[#6D28D9]   ${
+      className={` sm:text-base text-[4em]  hover:text-[#444444]   ${
         router.pathname === href
-          ? "text-violet-500 sm:text-customBlue"
-          : "text-violet-950"
-      } ${isHome ? "sm:text-black sm:hover:text-[#6D28D9]" : "sm:text-black "}`}
+          ? "text-[#faebd7] sm:text-[#faebd7]"
+          : "text-[#444444]"
+      } ${isHome ? "sm:text-white sm:hover:text-[#444444]" : "sm:text-white "}`}
       onClick={handleNavItemClick}
     >
       {children}
@@ -68,9 +68,9 @@ const Navbar = () => {
           ? isMenuOpen
             ? " bg-opacity-0"
               ? isScrolled
-              : "sm:bg-violet-200  sm:bg-opacity-50 sm:backdrop-blur-xs"
-            : "sm:bg-[#EDE9FE] sm:bg-opacity-[90%] sm:backdrop-blur-xs "
-          : "sm:bg-white sm:bg-opacity-20 sm:backdrop-blur-xs"
+              : "sm:bg-[#9c958beb] sm:bg-opacity-50 sm:backdrop-blur-xs"
+            : "sm:bg-[#9c958beb] sm:bg-opacity-[90%] sm:backdrop-blur-xs "
+          : "sm:bg-[#9c958beb] sm:bg-opacity-90 sm:backdrop-blur-xs"
       } flex items-center sm:shadow-md`}
     >
       <div className="sm:w-full  px-4 pb-4 pt-0 sm:py-4 flex flex-col sm:flex-row sm:justify-between">
@@ -78,13 +78,10 @@ const Navbar = () => {
           <Link
             href="/"
             className={`text-white font-bold text-xl cursor-pointer ${
-              isHome ? "" : "text-purple-500"
+              isHome ? "" : "text-violet-500"
             } hidden md:inline-flex`}
-            onClick={() => {
-              document.body.scrollTo(0, 0);
-            }}
           ></Link>
-          <ul className="hidden md:flex items-center text-[16px] gap-4 sm:gap-14 lg:ml-[3em] md:ml-[0.5em]">
+          <ul className="hidden  md:flex justify-around w-scr items-center  gap-4 sm:gap-14 lg:ml-[3em] md:ml-[0.5em]">
             <NavItem href="/">Inicio</NavItem>
             <NavItem href="/about-us">Sobre nosotros</NavItem>
           </ul>
@@ -102,8 +99,8 @@ const Navbar = () => {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={` ${isHome ? "#7c3aed" : "#7c3aed"}`}
-              className="w-6 h-6"
+              stroke={` ${isHome ? "#faebd7" : "#faebd7"}`}
+              className="w-8 h-8 "
             >
               <path
                 strokeLinecap="round"
@@ -118,9 +115,9 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke={` ${
-                isHome ? "#8B5CF6" : isContact ? "#8B5CF6" : "#8B5CF6"
+                isHome ? "#444444" : isContact ? "#444444" : "#444444"
               }`}
-              className="w-6 h-6"
+              className="w-8 h-8 "
             >
               <path
                 strokeLinecap="round"
@@ -133,12 +130,12 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`fixed rounded-r-[1em] bg-violet-200 top-0 left-0 z-20 h-screen w-[87%] transition-all duration-500 transform ${
+        className={`fixed rounded-r-[1em]   bg-[#9c958beb] top-0 left-0 z-20 h-screen w-[100%] transition-all duration-500 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } bg-black shadow-lg`}
+        } bg-black  shadow-lg`}
       >
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex justify-end  ">
+        <div className="container  mx-auto px-4 py-2">
+          <div className="flex justify-end ">
             <button
               className="focus:outline-none mt-[0.6em] "
               onClick={closeMenu}
@@ -149,8 +146,8 @@ const Navbar = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="black"
-                className="w-6 h-6"
+                stroke="#faebd7"
+                className="w-8 h-8 mt-[0.7em]"
               >
                 <path
                   strokeLinecap="round"
@@ -162,12 +159,12 @@ const Navbar = () => {
           </div>
           <Link
             href="/"
-            className={`text-gray-800 font-bold text-lg  mb-2 flex justify-center ${
-              !isHome && "text-purple-500"
+            className={`text-white font-bold text-lg  mb-2 flex justify-center ${
+              !isHome && "text-violet-500"
             }`}
             onClick={closeMenu}
           ></Link>
-          <ul className="flex flex-col  items-center gap-[1em] m-[3em]">
+          <ul className="flex text-center mt-[30%] flex-col relative items-center  m-[3em]">
             <div className="font-bold">
               <NavItem href="/">Inicio</NavItem>
             </div>
@@ -177,6 +174,13 @@ const Navbar = () => {
             </div>
           </ul>
         </div>
+        <Image
+          className="w-[90%] absolute bottom-0"
+          src="/detail.svg"
+          width={100}
+          height={100}
+          alt="detail"
+        />
       </div>
     </nav>
   );

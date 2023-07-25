@@ -13,7 +13,7 @@ const Card = ({ property }) => {
     >
       <Image
         src={`https:${property.imagenPrincipal.fields.file.url}`}
-        alt={property.title}
+        alt={property.titulo}
         width={300}
         height={200}
         className="w-full h-48 object-cover rounded-t-md"
