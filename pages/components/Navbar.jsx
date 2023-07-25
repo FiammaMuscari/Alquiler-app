@@ -132,7 +132,7 @@ const Navbar = () => {
       <div
         className={`fixed   bg-[#9c958beb] top-0 left-0 z-20 h-screen w-[100%] transition-all duration-500 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } bg-black  shadow-lg`}
+        }   shadow-lg`}
       >
         <div className="container  mx-auto px-4 py-2">
           <div className="flex justify-end ">
