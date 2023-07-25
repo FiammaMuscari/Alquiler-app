@@ -49,9 +49,16 @@ const PropertyDetails = ({ properties }) => {
   useEffect(() => {
     const prevBtn = document.querySelector(".swiper-button-prev");
     const nextBtn = document.querySelector(".swiper-button-next");
-
+    const pagination = document.querySelector(
+      ".swiper-pagination-bullet-active"
+    );
+    const paginationTwo = document.querySelector(
+      ".swiper-pagination-horizontal"
+    );
     prevBtn?.classList.add("swipperBtnPrev");
     nextBtn?.classList.add("swipperBtnNext");
+    pagination?.classList.add("pagination");
+    paginationTwo?.classList.add("pagination");
   }, []);
 
   return (

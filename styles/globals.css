@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --swiper-theme-color: #444444;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +24,12 @@ body {
 .no-select {
   user-select: none;
 }
+.pagination {
+  --swiper-theme-color: #444444;
+}
+.pagination::after {
+  --swiper-theme-color: #444444;
+}
 .swipperBtnNext {
   font-size: 5px;
   width: 64px !important;
@@ -32,7 +39,7 @@ body {
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 19%);
   right: -25px !important;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 .swipperBtnNext:hover {
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.14));
@@ -53,7 +60,7 @@ body {
   box-sizing: border-box;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 19%);
   left: -25px !important;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 .swipperBtnPrev::after {
   font-size: 22px !important;
