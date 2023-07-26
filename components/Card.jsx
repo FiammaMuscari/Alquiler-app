@@ -4,9 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Card = ({ property }) => {
-  if (!property || !property.id) {
-    return null;
-  }
   return (
     <Link
       href={`/propiedad/${property.id}`}

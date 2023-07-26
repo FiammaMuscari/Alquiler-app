@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 
-const PropertyDetails = ({ properties }) => {
+const PropertyDetails = ({ property }) => {
   const router = useRouter();
-  const property = properties[0];
+
   const tieneCocheraText = property.tieneCochera ? "Sí" : "No";
   const handleGoBack = () => {
     router.back();
@@ -77,16 +77,16 @@ const PropertyDetails = ({ properties }) => {
         height={400}
         className="m-auto h-64 object-cover rounded-md mb-4"
       />
-      <p className="text-lg text-black">{property.titulo}</p>
+      <p className="text-lg font-semibold text-black">{property.titulo}</p>
       <section className="flex flex-col gap-1 my-[1em]">
-        <h2 className="flex gap-1 mx-[0.3em]">
+        <h2 className="flex gap-[1em] mx-[0.3em]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-6 h-6 flex-shrink-0"
           >
             <path
               strokeLinecap="round"
@@ -96,14 +96,14 @@ const PropertyDetails = ({ properties }) => {
           </svg>
           {property.nmeroDeHabitaciones} Ambientes
         </h2>
-        <h2 className="flex gap-1 mx-[0.3em]">
+        <h2 className="flex gap-[1em] items-center mx-[0.3em] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-6"
+            className="w-6 h-6 flex-shrink-0"
           >
             <path
               strokeLinecap="round"
@@ -118,14 +118,14 @@ const PropertyDetails = ({ properties }) => {
           </svg>
           Direccion: {property.direccion}
         </h2>
-        <h2 className="flex mx-[0.3em] gap-1">
+        <h2 className="flex mx-[0.3em] items-center gap-[1em]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-5 h-6"
+            className="w-6 h-6 flex-shrink-0 items-center"
           >
             <path
               strokeLinecap="round"
@@ -174,22 +174,24 @@ const PropertyDetails = ({ properties }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const { id } = context.params;
+
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  // Obtener las entradas (propiedades) desde Contentful
   const entries = await client.getEntries({
-    content_type: "alquiler", // Asegúrate de usar el nombre correcto del tipo de contenido
+    content_type: "alquiler",
   });
 
-  // Mapear las entradas y retornarlas como propiedades
   const properties = entries.items.map((entry) => entry.fields);
 
+  const property = properties.find((prop) => Number(prop.id) === Number(id));
+
   return {
-    props: { properties },
+    props: { property },
   };
 }
 

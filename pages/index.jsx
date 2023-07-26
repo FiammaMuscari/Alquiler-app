@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "./components/Grid";
+import Grid from "../components/Grid";
 import { createClient } from "contentful";
 
 const Home = ({ properties }) => {
