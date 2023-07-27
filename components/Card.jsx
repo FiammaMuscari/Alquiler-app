@@ -4,6 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Card = ({ property }) => {
+  const truncateText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "…";
+    }
+    return text;
+  };
   return (
     <Link
       href={`/propiedad/${property.id}`}
@@ -18,7 +24,9 @@ const Card = ({ property }) => {
       />
       <div className="p-2">
         <h3 className="text-lg font-semibold">{property.titulo}</h3>
-        <p className="text-sm text-gray-600">{property.metaDescripcion}</p>
+        <p className="text-sm text-gray-600">
+          {truncateText(property.metaDescripcion, 130)}
+        </p>
       </div>
     </Link>
   );
