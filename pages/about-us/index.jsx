@@ -3,7 +3,7 @@ import React from "react";
 
 export default function index() {
   return (
-    <section className="my-[5em] flex justify-center flex-col items-center m-[2em] mt-[7em] text-center gap-3">
+    <section className="m-auto max-w-[20em] pt-[7em] flex justify-center flex-col items-center  text-center gap-3">
       <Image
         src="/lol.svg"
         width={200}

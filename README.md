@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Este es un proyecto crado con Next, Tailwind y Contentful
+
+Vamos a copiar el repo!!
 
 ```bash
+
+git clone {"Link del repo"}
+
+cd {"nombre repo"}
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
 ```
+## Modelo del contentful
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![img](https://i.ibb.co/XF6c9mF/ajajaj.png)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Copiar todos los datos del Contentful tal cual la imagen para ingresar nuestros datos de alquiler.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Modifica el .env
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Agregale tus valores de Space_id y access_token de Contentful 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Dentro del repo borraremos el "example" del .env y agregaremos nuestras keys.
 
-## Learn More
+Vamos a agregar una API Key en Contentful > Settings > API Keys > Add API Key
 
-To learn more about Next.js, take a look at the following resources:
+Dentro de nuestra Api copiamos Space ID y reemplazamos por la primer variable de entorno, y para la segunda elegimos el Deliver API - access token ya que el segundo no funcionará.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Y listo tienes tu app corriendo localmente solo necesitas agregar los datos dentro de la pestaña "Content"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Como correrlo en vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Y bueno agregamos las variables de entorno en el deploy antes de lanzar nuestra app SIN COMILLAS, gracias uwu
