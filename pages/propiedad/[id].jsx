@@ -16,6 +16,9 @@ const PropertyDetails = ({ property }) => {
     router.back();
   };
 
+  const video = property.videos?.map(
+    (video) => `https:${video.fields.file.url}`
+  );
   const images = property.imagenes.map(
     (imagen) => `https:${imagen.fields.file.url}`
   );
@@ -75,7 +78,7 @@ const PropertyDetails = ({ property }) => {
         alt={property.titulo}
         width={600}
         height={400}
-        className="m-auto h-64 object-cover rounded-md mb-4"
+        className="m-auto h-64 object-contain rounded-md mb-4"
       />
       <p className="text-lg font-semibold text-black">{property.titulo}</p>
       <section className="flex flex-col gap-1 my-[1em]">
@@ -170,6 +173,13 @@ const PropertyDetails = ({ property }) => {
           </div>
         </button>
       )}
+      <div>
+        {video?.length > 0 && (
+          <video className="w-[40em] m-auto" controls>
+            <source src={video[0]} type="video/mp4" />
+          </video>
+        )}
+      </div>
     </div>
   );
 };
