@@ -3,9 +3,17 @@ import Grid from "../components/Grid";
 import { createClient } from "contentful";
 
 const Home = ({ properties }) => {
+  const modifiedProperties = [...properties].reverse();
   return (
     <>
+      <h1 className="bg-[#d3c46e62] p-[0.3em] font-bold flex justify-center mt-[7em]">
+        Disponibles:
+      </h1>
       <Grid properties={properties} />
+      <h1 className="bg-[#d3c46e62] p-[0.3em] font-bold flex justify-center">
+        Más populares:
+      </h1>
+      <Grid properties={modifiedProperties} />
     </>
   );
 };

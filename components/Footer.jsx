@@ -4,6 +4,7 @@ export default function Footer() {
   const phoneNumber = "+542236156046";
   return (
     <footer className="bg-white p-4  border-gray-300 footer-mobile">
+      <hr />
       <section>
         <div className="flex justify-around">
           <div>
@@ -91,8 +92,6 @@ export default function Footer() {
           </div>
         </div>
       </section>
-
-      <hr />
 
       <section className="mt-4"></section>
     </footer>

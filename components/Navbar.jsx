@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import Image from "next/image";
+
+import { useRouter } from "next/router";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHome, setIsHome] = useState(true);
@@ -52,9 +53,9 @@ const Navbar = () => {
       href={href}
       className={` sm:text-base text-[4em]  hover:text-[#444444]   ${
         router.pathname === href
-          ? "text-[#faebd7] sm:text-[#faebd7]"
+          ? "text-[#9776235e] sm:text-[#9776235e]"
           : "text-[#444444]"
-      } ${isHome ? "sm:text-white sm:hover:text-[#444444]" : "sm:text-white "}`}
+      } ${isHome ? "sm:text-[#444444] " : "sm:text-[#444444] "}`}
       onClick={handleNavItemClick}
     >
       {children}
@@ -68,13 +69,16 @@ const Navbar = () => {
           ? isMenuOpen
             ? " bg-opacity-0"
               ? isScrolled
-              : "sm:bg-[#9c958beb] sm:bg-opacity-50 sm:backdrop-blur-xs"
-            : "sm:bg-[#9c958beb] sm:bg-opacity-[90%] sm:backdrop-blur-xs "
-          : "sm:bg-[#9c958beb] sm:bg-opacity-90 sm:backdrop-blur-xs"
-      } flex items-center sm:shadow-md`}
+              : "sm:bg-[#f5f5dc]  sm:bg-opacity-50 sm:backdrop-blur-xs"
+            : "sm:bg-white bg-white mt-0 pt-[3em] sm:bg-opacity-[90%] sm:backdrop-blur-xs "
+          : "sm:bg-white sm:backdrop-blur-xs"
+      } flex items-center m-0 `}
     >
-      <div className="sm:w-full  px-4 pb-4 pt-0 sm:py-4 flex flex-col sm:flex-row sm:justify-between">
-        <div className="flex gap-2">
+      <Link href={"/"}>
+        <Image src="/logo.webp" alt="logo" width={150} height={100} />
+      </Link>
+      <div className="sm:w-full  px-4 pb-4 pt-0 sm:py-4 flex flex-col sm:flex-row sm:justify-end ">
+        <div className="flex gap-2 ">
           <Link
             href="/"
             className={`text-white font-bold text-xl cursor-pointer ${
@@ -130,7 +134,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`fixed   bg-[#9c958beb] top-0 left-0 z-20 h-screen w-[100%] transition-all duration-500 transform ${
+        className={`fixed   bg-[#f5f5dc] top-0 left-0 z-20 h-screen w-[100%] transition-all duration-500 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }   shadow-lg`}
       >
@@ -146,7 +150,7 @@ const Navbar = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="#faebd7"
+                stroke="#9776235e"
                 className="w-8 h-8 mt-[0.7em]"
               >
                 <path
@@ -175,9 +179,9 @@ const Navbar = () => {
           </ul>
         </div>
         <Image
-          className="w-[70%] absolute bottom-0"
-          src="/detail.svg"
-          width={100}
+          className=" absolute bottom-0"
+          src="/logo.webp"
+          width={270}
           height={100}
           alt="detail"
         />

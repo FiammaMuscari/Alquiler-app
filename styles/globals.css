@@ -74,3 +74,6 @@ body {
 .containerSwiper {
   position: relative;
 }
+.swiper-pagination-bullet-active {
+  background: #ffd900 !important;
+}

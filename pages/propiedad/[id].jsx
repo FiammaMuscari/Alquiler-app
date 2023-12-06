@@ -68,9 +68,9 @@ const PropertyDetails = ({ property }) => {
     <div className="container my-[3em] mx-auto px-4 py-8">
       <button
         onClick={handleGoBack}
-        className="mb-4 px-4 py-2 bg-[#bdb5aaeb] font-bold text-white hover:text-[#444444] rounded-md hover:bg-[#d3cabeeb] focus:outline-none"
+        className="mb-4 px-4 py-2 cursor-pointer mt-[1em] font-bold text-[#444444] rounded-md  focus:outline-none"
       >
-        Volver Atrás
+        &larr; Volver Atrás
       </button>
       <h1 className="text-3xl font-semibold mb-4"></h1>
       <Image

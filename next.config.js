@@ -2,6 +2,12 @@
 
 module.exports = {
   images: {
-    domains: ["images.ctfassets.net"],
+    domains: [
+      "images.ctfassets.net",
+      "cdn-italiani-media.italiani.it",
+      "cf.bstatic.com",
+      "th.bing.com",
+      "i.pinimg.com",
+    ],
   },
 };
