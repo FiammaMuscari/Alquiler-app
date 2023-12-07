@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import FloatingButton from "./FloatingButton";
 
 const Grid = ({ properties }) => {
   if (!properties || properties.length === 0) {
@@ -13,9 +14,6 @@ const Grid = ({ properties }) => {
   }
 
   return (
-    // <div className="grid mt-[5em] grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-
-    // </div>
     <>
       <div className="hidden md:block">
         <Swiper

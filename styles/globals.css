@@ -16,6 +16,26 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.floating-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #25d366; /* Color de fondo de WhatsApp */
+  color: #fff; /* Color del texto */
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+}
 
 body {
   color: black;
