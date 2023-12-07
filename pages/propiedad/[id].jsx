@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import Video from "next-video";
 
 const PropertyDetails = ({ property }) => {
   const router = useRouter();
@@ -201,9 +202,7 @@ const PropertyDetails = ({ property }) => {
       )}
       <div>
         {video?.length > 0 && (
-          <video className="w-[40em] m-auto" controls>
-            <source src={video[0]} type="video/mp4" />
-          </video>
+          <Video className="w-[40em] m-auto" src={video[0]} />
         )}
       </div>
     </div>
@@ -212,7 +211,14 @@ const PropertyDetails = ({ property }) => {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-
+  if (!id) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -226,6 +232,14 @@ export async function getServerSideProps(context) {
 
   const property = properties.find((prop) => Number(prop.id) === Number(id));
 
+  if (!property) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   return {
     props: { property },
   };
