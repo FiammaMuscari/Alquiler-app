@@ -19,8 +19,9 @@ const Card = ({ property }) => {
         <Image
           src={`https:${property.imagenPrincipal.fields.file.url}`}
           alt={property.titulo}
-          layout="fill"
-          objectFit="cover"
+          width={700}
+          height={200}
+          className=" w-full h-full"
         />
       </div>
       <div className="flex flex-col h-[11em]  p-4">

@@ -19,7 +19,7 @@ const Grid = ({ properties }) => {
     <>
       <div className="hidden md:block">
         <Swiper
-          slidesPerView={2}
+          slidesPerView={3}
           spaceBetween={30}
           pagination={{
             clickable: true,
