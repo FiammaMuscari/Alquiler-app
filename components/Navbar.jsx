@@ -69,9 +69,9 @@ const Navbar = () => {
           ? isMenuOpen
             ? " bg-opacity-0"
               ? isScrolled
-              : "sm:bg-[#f5f5dc]  sm:bg-opacity-50 sm:backdrop-blur-xs"
+              : "sm:bg-[#f5f5dc]  sm:bg-opacity-50 sm:backdrop-blur-xs "
             : "sm:bg-white bg-white mt-0 pt-[3em] sm:bg-opacity-[90%] sm:backdrop-blur-xs "
-          : "sm:bg-white sm:backdrop-blur-xs"
+          : "sm:bg-white sm:backdrop-blur-xs pt-[3em] "
       } flex items-center m-0 `}
     >
       <Link href={"/"}>
