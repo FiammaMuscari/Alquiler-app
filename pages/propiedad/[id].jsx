@@ -149,7 +149,7 @@ const PropertyDetails = ({ property }) => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper m-[3em] h-[25em]"
+          className="mySwiper m-[3em] h-[30em]"
           loop={true}
         >
           {images.map((imageUrl, index) => (
