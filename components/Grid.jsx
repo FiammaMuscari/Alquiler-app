@@ -23,7 +23,7 @@ const Grid = ({ properties }) => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper m-[3em] h-[30em]"
+          className="mySwiper m-[3em] h-[28.5em]"
           loop={true}
         >
           {properties.map((property, index) => (
@@ -41,7 +41,7 @@ const Grid = ({ properties }) => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper m-[3em] h-[30em]"
+          className="mySwiper m-[3em] h-[28.5em]"
           loop={true}
         >
           {properties.map((property, index) => (
