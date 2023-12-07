@@ -140,7 +140,33 @@ const PropertyDetails = ({ property }) => {
         </h2>
       </section>
       <h1>{property.descripcion}</h1>
-      <section className="my-[2em] no-select">
+      <section className="my-[2em] no-select hidden md:block">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper m-[3em] h-[25em]"
+          loop={true}
+        >
+          {images.map((imageUrl, index) => (
+            <SwiperSlide key={index}>
+              <div onClick={() => handleImageClick(index)}>
+                <Image
+                  src={imageUrl}
+                  alt={`Slide ${index + 1}`}
+                  width={600}
+                  height={400}
+                  className="m-auto h-[40em] object-contain rounded-md mb-4 cursor-pointer"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+      <section className="my-[2em] no-select block md:hidden">
         <Swiper {...swiperParams}>
           {images.map((imageUrl, index) => (
             <SwiperSlide key={index}>
