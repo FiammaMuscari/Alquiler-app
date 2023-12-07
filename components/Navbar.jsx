@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-screen font-semibold p-[2em] items-end sm:items-center  mt-[1em] h-[65px] sm:mt-0  sm:flex md:flex pl-6 sm:px-6 fixed sm:bg-opacity-50 xs:bg-opacity-0 justify-between transition-all duration-500 z-50  ${
+      className={`w-screen font-semibold mt-[0em] p-[2em] items-end sm:items-center  h-[65px] sm:mt-0  sm:flex md:flex pl-6 sm:px-6 fixed sm:bg-opacity-50 xs:bg-opacity-0 justify-between transition-all duration-500 z-50  ${
         isHome
           ? isMenuOpen
             ? " bg-opacity-0"
