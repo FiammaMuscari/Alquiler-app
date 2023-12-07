@@ -69,10 +69,10 @@ const Navbar = () => {
           ? isMenuOpen
             ? " bg-opacity-0"
               ? isScrolled
-              : "sm:bg-[#f5f5dc]  sm:bg-opacity-50 sm:backdrop-blur-xs "
+              : "sm:bg-[#f5f5dc] bg-white sm:bg-opacity-50 sm:backdrop-blur-xs "
             : "sm:bg-white bg-white mt-0 pt-[3em] sm:bg-opacity-[90%] sm:backdrop-blur-xs "
-          : "sm:bg-white sm:backdrop-blur-xs pt-[3em] "
-      } flex items-center m-0 `}
+          : "sm:bg-white bg-white sm:backdrop-blur-xs pt-[3em] "
+      } flex items-center mt-[0em] `}
     >
       <Link href={"/"}>
         <Image src="/logo.webp" alt="logo" width={150} height={100} />

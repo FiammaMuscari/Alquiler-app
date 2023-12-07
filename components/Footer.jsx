@@ -11,11 +11,11 @@ export default function Footer() {
             <h4 className="text-[#a09999] font-bold mt-[1.5em] my-[0.4em]">
               Secciones
             </h4>
-            <div className="flex flex-col gap-2">
-              <Link className="text-[#444444] font-bold" href="/">
+            <div className="flex flex-col gap-2 ">
+              <Link className="text-[#444444] font-bold " href="/">
                 Inicio
               </Link>
-              <Link className="text-[#444444] font-bold" href="/about-us">
+              <Link className="text-[#444444] font-bold " href="/about-us">
                 Sobre nosotros
               </Link>
             </div>

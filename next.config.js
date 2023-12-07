@@ -1,3 +1,5 @@
+const { withNextVideo } = require("next-video/process");
+
 /** @type {import('next').NextConfig} */
 
 module.exports = {
@@ -8,6 +10,7 @@ module.exports = {
       "cf.bstatic.com",
       "th.bing.com",
       "i.pinimg.com",
+      "videos.ctfassets.net",
     ],
   },
 };
