@@ -21,7 +21,7 @@ const Card = ({ property }) => {
           alt={property.titulo}
           width={700}
           height={200}
-          className=" w-full h-full"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="flex flex-col h-[11em]  p-4">
