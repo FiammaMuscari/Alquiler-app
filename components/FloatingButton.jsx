@@ -9,7 +9,7 @@ const FloatingButton = ({ phoneNumber, defaultMessage }) => {
 
   return (
     <button
-      className="bg-[#25d366] hover:bg-[#128C7E] text-white font-bold py-5 px-5 rounded-full fixed bottom-[7rem] right-[2rem] z-50 shadow-lg"
+      className="bg-[#25d366] hover:bg-[#128C7E] text-white font-bold py-4 px-4 rounded-full fixed bottom-[2rem] right-[2rem] z-[49] shadow-lg"
       onClick={handleButtonClick}
       title="Chatear por WhatsApp"
       style={{ borderRadius: "50%" }}
