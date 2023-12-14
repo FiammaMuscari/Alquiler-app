@@ -64,10 +64,17 @@ const Card = ({ property }) => {
       </div>
       <div className="flex flex-col h-[11em]  p-4">
         <h3 className="text-lg font-semibold mb-2">{property.titulo}</h3>
-        <div className="flex items-center mb-2">
-          {renderStars(property.estrellas)}
+        <div className="flex justify-between">
+          <div className="flex items-center mb-2">
+            {renderStars(property.estrellas)}
+          </div>
+          {property.zona && (
+            <p className="neon max-w-fit flex justify-center border-solid border-2">
+              {property.zona}
+            </p>
+          )}
         </div>
-        <p className="text-sm  text-gray-600 flex-grow">
+        <p className="text-sm  text-gray-600 flex-grow mt-2">
           {truncateText(property.metaDescripcion, 130)}
         </p>
       </div>

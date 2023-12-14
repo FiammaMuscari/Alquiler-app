@@ -36,6 +36,20 @@ body {
   color: black;
   background: white;
 }
+
+.neon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid #fd7a22;
+  border-radius: 0.3rem;
+  padding: 0.4em;
+  color: #ce520a;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #e60000, 0 0 20px #ff7606,
+    0 0 30px #e60000;
+  background-color: #fe7d135b;
+  font-size: smaller;
+}
 .no-select {
   user-select: none;
 }
