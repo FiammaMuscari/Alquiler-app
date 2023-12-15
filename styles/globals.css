@@ -37,6 +37,11 @@ body {
   background: white;
 }
 
+.map-container {
+  width: 100%;
+  height: 100vh;
+}
+
 .neon {
   display: flex;
   align-items: center;

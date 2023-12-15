@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import Video from "next-video";
+import Map from "@/components/Map";
 
 const PropertyDetails = ({ property }) => {
   const router = useRouter();
@@ -200,7 +201,7 @@ const PropertyDetails = ({ property }) => {
           </div>
         </button>
       )}
-      <div>
+      <section>
         {video?.length > 0 && (
           <Video
             className="w-[40em] m-auto"
@@ -209,7 +210,11 @@ const PropertyDetails = ({ property }) => {
             src={video[0]}
           />
         )}
-      </div>
+      </section>
+      <section>
+        <h2 className="text-lg font-semibold my-4">Ubicación:</h2>
+        <Map property={property} />
+      </section>
     </div>
   );
 };
