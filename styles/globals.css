@@ -38,8 +38,9 @@ body {
 }
 
 .map-container {
-  width: 100%;
+  width: 90%;
   height: 100vh;
+  margin: auto;
 }
 
 .neon {
