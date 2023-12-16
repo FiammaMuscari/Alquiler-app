@@ -7,7 +7,7 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-      className="bg-[#472d0e] hover:bg-[#332009] text-white font-bold py-4 px-4 rounded-full fixed bottom-[7rem] right-[2rem] z-[49] shadow-lg"
+      className="bg-[#472d0ecb] hover:bg-[#332009d7] text-white font-bold py-4 px-4 rounded-full fixed bottom-[7rem] right-[0.2rem] z-[49] shadow-lg"
       onClick={handleScrollToTop}
       title="Ir arriba"
       style={{ borderRadius: "50%" }}

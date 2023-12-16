@@ -6,19 +6,23 @@ export default function Footer() {
     <footer className="bg-white p-4  border-gray-300 footer-mobile">
       <hr />
       <section>
-        <div className="flex justify-around">
-          <div>
-            <h4 className="text-[#a09999] font-bold mt-[1.5em] my-[0.4em]">
-              Secciones
-            </h4>
-            <div className="flex flex-col gap-2 ">
-              <Link className="text-[#444444] font-bold " href="/">
-                Inicio
-              </Link>
-              <Link className="text-[#444444] font-bold " href="/about-us">
-                Sobre nosotros
-              </Link>
-            </div>
+        <div className="flex flex-col md:flex-row justify-around">
+          <div className="extra-info my-4  justify-center md:block hidden ">
+            <ul className="space-y-2">
+              <li className="flex items-center gap-4 text-[#a09999] font-bold">
+                Secciones
+              </li>
+              <li className="flex items-center gap-4">
+                <Link className="text-[#444444] font-bold " href="/">
+                  Inicio
+                </Link>
+              </li>
+              <li className="flex items-center gap-4">
+                <Link className="text-[#444444] font-bold " href="/about-us">
+                  Sobre nosotros
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className="extra-info my-4 flex justify-center">
             <ul className="space-y-2">
@@ -61,12 +65,12 @@ export default function Footer() {
                     />
                   </svg>
 
-                  <span className="text-[#a09999] font-medium">
+                  <span className="text-[#a09999] font-medium content-center">
                     +54 223 615 6046
                   </span>
                 </li>
               </a>
-              <li className="flex items-center gap-4">
+              <li className="flex items-center gap-4 ">
                 <svg
                   width="16"
                   height="13"
@@ -92,8 +96,6 @@ export default function Footer() {
           </div>
         </div>
       </section>
-
-      <section className="mt-4"></section>
     </footer>
   );
 }
